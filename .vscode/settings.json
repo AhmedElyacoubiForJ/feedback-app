@@ -1,0 +1,7 @@
+// To enable auto renaming of tags in HTML, XML, and JSX
+{
+  "editor.linkedEditing": true,
+
+  "javascript.preferences.renameMatchingJsxTags": true,
+  "typescript.preferences.renameMatchingJsxTags": true
+}
