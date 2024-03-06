@@ -1,10 +1,14 @@
 // impt
 import PropTypes from 'prop-types'
 
+const headerStyled = {
+  backgroundColor: 'blue',
+  color: 'red'
+}
 
 function Header({ text }) {
   return (
-    <header style={{backgroundColor: 'blue', color: 'red'}}>
+    <header style={headerStyled}>
       <div className="container">
         <h2>{text}</h2>
       </div>
