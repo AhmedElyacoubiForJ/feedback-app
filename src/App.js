@@ -12,13 +12,8 @@ function App() {
   const showComments = true;
   if (loading) return <h1>Loading...</h1>;
 
-  return (
-    <div className="container">
-      <h1>{title.toUpperCase()}</h1>
-      <p>{body}</p>
-
-      {showComments && (
-        <div className="comments">
+  const commentBlock = (
+    <div className="comments">
           <h3>Comments ({comments.length})</h3>
           <ul>
             {comments.map((comment) => {
@@ -28,7 +23,14 @@ function App() {
             })}
           </ul>
         </div>
-      )}
+  )
+
+  return (
+    <div className="container">
+      <h1>{title.toUpperCase()}</h1>
+      <p>{body}</p>
+
+      {showComments && commentBlock}
 
     </div>
   );
