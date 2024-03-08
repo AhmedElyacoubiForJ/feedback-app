@@ -1,8 +1,10 @@
+import Card from "../shared/Card"
+
 function FeedbackForm() {
   return (
-    <div>
+    <Card>
       Form
-    </div>
+    </Card>
   )
 }
 
