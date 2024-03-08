@@ -1,8 +1,8 @@
-import { PropTypes } from "prop-types"
+import { PropTypes } from "prop-types";
 
-import FeedbackItem from "./FeedbackItem"
+import FeedbackItem from "./FeedbackItem";
 
-function FeedbackList({ feedback }) {
+function FeedbackList({ feedback, handleDelete }) {
   if (!feedback || feedback.length === 0) {
     return "No Feedback Yet";
   }
@@ -10,21 +10,24 @@ function FeedbackList({ feedback }) {
   return (
     <div className="feedback-list">
       {feedback.map((item) => (
-        <FeedbackItem key={item.id} item={item} />
+        <FeedbackItem
+          key={item.id}
+          item={item}
+          handleDelete={() => handleDelete(item.id)}
+        />
       ))}
     </div>
-  )
+  );
 }
 
 FeedbackList.propTypes = {
-    feedback: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            text: PropTypes.string.isRequired,
-            rating: PropTypes.number.isRequired,
+  feedback: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      text: PropTypes.string.isRequired,
+      rating: PropTypes.number.isRequired,
+    })
+  ),
+};
 
-        })
-    )
-}
-
-export default FeedbackList
+export default FeedbackList;
