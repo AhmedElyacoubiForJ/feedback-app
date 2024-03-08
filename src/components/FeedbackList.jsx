@@ -13,7 +13,7 @@ function FeedbackList({ feedback, handleDelete }) {
         <FeedbackItem
           key={item.id}
           item={item}
-          handleDelete={() => handleDelete(item.id)}
+          handleDelete={handleDelete}
         />
       ))}
     </div>
