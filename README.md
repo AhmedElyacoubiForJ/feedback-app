@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### `npm i ract-icons`
 ### `npm i uuid`
+### `npm i framer-motion`
