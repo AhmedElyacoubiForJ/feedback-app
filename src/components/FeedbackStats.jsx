@@ -4,10 +4,10 @@ function FeedbackStats({ feedback }) {
   // Calculate ratings avg
   let average =
     feedback.reduce((acc, cur) => {
-      return acc + cur.rating
-    }, 0) / feedback.length
+      return acc + cur.rating;
+    }, 0) / feedback.length;
 
-    average = average.toFixed(1).replace(/[.,]0$/, '')
+  average = average.toFixed(1).replace(/[.,]0$/, "");
 
   return (
     <div className="feedback-stats">
@@ -18,7 +18,7 @@ function FeedbackStats({ feedback }) {
 }
 
 FeedbackStats.propesTypes = {
-    feedback: PropTypes.array.isRequired,
-}
+  feedback: PropTypes.array.isRequired,
+};
 
 export default FeedbackStats;

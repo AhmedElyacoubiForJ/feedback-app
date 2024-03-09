@@ -4,13 +4,13 @@ function RatingSelect({ select }) {
   const [selected, setSelected] = useState(10);
 
   const handleChange = (e) => {
-   /*  console.log(typeof e.currentTarget.value) // is a string
+    /*  console.log(typeof e.currentTarget.value) // is a string
     console.log(typeof +e.currentTarget.value) // is a number */
-    
+
     // + operator to convert string to number type
-    setSelected(+e.currentTarget.value)
-    select(+e.currentTarget.value)
-  }
+    setSelected(+e.currentTarget.value);
+    select(+e.currentTarget.value);
+  };
 
   return (
     <ul className="rating">

@@ -1,4 +1,4 @@
-import { PropTypes } from "prop-types"
+import { PropTypes } from "prop-types";
 /*
     styling component to use it in multiple places.
     reverse prop to reverse the style either as a class or as style prop
@@ -21,15 +21,15 @@ function Card({ children, reverse }) {
     >
       {children}
     </div>
-  )
+  );
 }
 
 Card.defaultProps = {
   reverse: false,
-}
+};
 Card.propTypes = {
-    children: PropTypes.node.isRequired,
-    reverse: PropTypes.bool
-}
+  children: PropTypes.node.isRequired,
+  reverse: PropTypes.bool,
+};
 
-export default Card
+export default Card;
