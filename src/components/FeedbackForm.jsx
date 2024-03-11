@@ -1,9 +1,16 @@
+import { useContext } from "react";
+
 import { useState } from "react";
+import FeedbackContext from "../context/FeedbackContext";
 import Card from "./shared/Card";
 import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
 
-function FeedbackForm({ handleAdd }) {
+function FeedbackForm() {
+  // exact what we want to use from context
+  // Fetch handler with the useContext Hook
+  const { addFeedback } = useContext(FeedbackContext);
+
   const [text, setText] = useState("");
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
@@ -32,7 +39,7 @@ function FeedbackForm({ handleAdd }) {
         text: text,
         rating: rating
       }
-      handleAdd(newFeedback)
+      addFeedback(newFeedback)
 
       // clear the form
       setText('')
