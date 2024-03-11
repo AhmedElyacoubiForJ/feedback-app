@@ -74,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `npm i uuid`
 ### `npm i framer-motion`
 ### `npm i react-router-dom`
+### `npm run build`
+### `serve -s build`
+### TODO is to deploy on https://app.netlify.com/login for static test
