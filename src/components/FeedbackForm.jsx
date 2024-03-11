@@ -1,19 +1,28 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 import FeedbackContext from "../context/FeedbackContext";
 import Card from "./shared/Card";
 import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
+import FeedbackItem from "./FeedbackItem";
 
 function FeedbackForm() {
-  // exact what we want to use from context
-  // Fetch handler with the useContext Hook
-  const { addFeedback } = useContext(FeedbackContext);
-
   const [text, setText] = useState("");
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
+
+  // exact what we want to use from context
+  // Fetch handler with the useContext Hook
+  const { addFeedback, feedbackObjectToBeEdited } = useContext(FeedbackContext);
+
+  useEffect(() => {
+    if(feedbackObjectToBeEdited.edit === true) {
+      setBtnDisabled(false)
+      setText(feedbackObjectToBeEdited.item.text)
+      setRating(feedbackObjectToBeEdited.item.rating)
+    }
+  },[feedbackObjectToBeEdited])
 
   const handleTextChange = (e) => {
     // validation

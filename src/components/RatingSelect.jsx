@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
+
+import FeedbackContext from "../context/FeedbackContext";
 
 function RatingSelect({ select }) {
   const [selected, setSelected] = useState(10);
+
+  const { feedbackObjectToBeEdited } = useContext(FeedbackContext);
+  useEffect(() => {
+    setSelected(feedbackObjectToBeEdited.item.rating)
+  }, [feedbackObjectToBeEdited])
 
   const handleChange = (e) => {
     /*  console.log(typeof e.currentTarget.value) // is a string

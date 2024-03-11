@@ -22,7 +22,7 @@ export const FeedbackProvider = ({ children }) => {
     },
   ]);
 
-  const [feedbackEdit, setFeedbackEdit] = useState({
+  const [feedbackObjectToBeEdited, setFeedbackObjectToBeEdited] = useState({
     item: {},
     edit: false,
   });
@@ -42,8 +42,7 @@ export const FeedbackProvider = ({ children }) => {
 
   // set item to be updated
   const editFeedback = (item) => {
-    console.log(item)
-    setFeedbackEdit({
+    setFeedbackObjectToBeEdited({
       item,
       edit: true,
     });
@@ -56,6 +55,7 @@ export const FeedbackProvider = ({ children }) => {
         deleteFeedback,
         addFeedback,
         editFeedback,
+        feedbackObjectToBeEdited,
       }}
     >
       {children}
