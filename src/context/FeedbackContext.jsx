@@ -1,9 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const FeedbackContext = createContext();
 
 export const FeedbackProvider = ({ children }) => {
+  /* i want first don't deleted for static deploy on Netlify
   const [feedback, setFeedback] = useState([
     {
       id: 1,
@@ -20,12 +21,24 @@ export const FeedbackProvider = ({ children }) => {
       text: "This is feedback item 3",
       rating: 7,
     },
-  ]);
+  ]); */
 
+  const [feedback, setFeedback] = useState([]);
   const [feedbackObjectToBeEdited, setFeedbackObjectToBeEdited] = useState({
     item: {},
     edit: false,
   });
+
+  useEffect(() => {
+    fetchFeedback()
+  }, []);
+
+  // Fetch feedback
+  const fetchFeedback = async () => {
+    const response = await fetch(`http://localhost:5000/feedback`) // ?_sort=id&_order=desc
+    const data = await response.json()
+    setFeedback(data)
+  }
 
   // Delete feedback
   const deleteFeedback = (id) => {
