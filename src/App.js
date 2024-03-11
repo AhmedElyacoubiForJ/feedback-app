@@ -8,8 +8,6 @@ import AboutPage from "./components/pages/AboutPage";
 import { FeedbackProvider } from "./context/FeedbackContext";
 import AboutIconLink from "./components/AboutIconLink";
 
-/* we want to make the app state globaly, Context API & useState comming soon */
-
 function App() {
   return (
     <FeedbackProvider>

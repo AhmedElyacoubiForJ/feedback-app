@@ -18,7 +18,7 @@ function FeedbackForm() {
 
   const handleTextChange = (e) => {
     // validation
-    if (text === '') {
+    if (text === "") {
       setBtnDisabled(true);
       setMessage(null);
     } else if (text !== "" && text.trim().length <= 10) {
@@ -33,19 +33,18 @@ function FeedbackForm() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (text.trim().length > 10) {
       const newFeedback = {
         text: text,
-        rating: rating
-      }
-      addFeedback(newFeedback)
+        rating: rating,
+      };
+      addFeedback(newFeedback);
 
       // clear the form
-      setText('')
+      setText("");
     }
-
-  }
+  };
 
   return (
     <Card>
