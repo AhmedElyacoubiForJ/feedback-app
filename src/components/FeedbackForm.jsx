@@ -1,6 +1,5 @@
-import { useContext } from "react";
+import { useState, useContext } from "react";
 
-import { useState } from "react";
 import FeedbackContext from "../context/FeedbackContext";
 import Card from "./shared/Card";
 import Button from "./shared/Button";
