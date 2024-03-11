@@ -13,6 +13,8 @@ React front to backend Feedback Project [Traversymedia](https://www.traversymedi
 
 ### `npm i json-server`
 ### `npm run server`
+### `npm i concurrently`
+### `npm run dev`
 
 ## Docs & useful pages
 
