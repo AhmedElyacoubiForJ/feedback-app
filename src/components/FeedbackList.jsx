@@ -6,6 +6,7 @@ import FeedbackContext from "../context/FeedbackContext";
 
 function FeedbackList({ handleDelete }) {
   // exact what we want to use from context
+  // Fetch State with the useContext Hook
   const { feedback } = useContext(FeedbackContext)
 
 
@@ -47,7 +48,7 @@ function FeedbackList({ handleDelete }) {
 /* the component
   don't have the property feedback no more, so the check is superfluous.
   But I'll leave it here as an example.
-  
+
   FeedbackList.propTypes = {
   feedback: PropTypes.arrayOf(
     PropTypes.shape({

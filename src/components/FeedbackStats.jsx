@@ -3,7 +3,7 @@ import { useContext } from "react";
 import FeedbackContext from "../context/FeedbackContext";
 
 function FeedbackStats() {
-  // exact what we want to use from context
+  // Fetch State with the useContext Hook
   const { feedback } = useContext(FeedbackContext)
 
   // Calculate ratings avg
