@@ -3,17 +3,27 @@
 React front to backend Feedback Project [Traversymedia](https://www.traversymedia.com/products/react-front-to-back)
 
 ## Available Scripts
+
 ### `npm start`
+
 ### `npm i ract-icons`
+
 ### `npm i uuid`
+
 ### `npm i framer-motion`
+
 ### `npm i react-router-dom`
+
 ### `npm run build`
+
 ### `serve -s build`
 
 ### `npm i json-server`
+
 ### `npm run server`
+
 ### `npm i concurrently`
+
 ### `npm run dev`
 
 ## Docs & useful pages

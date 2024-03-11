@@ -23,7 +23,7 @@ export const FeedbackProvider = ({ children }) => {
     },
   ]); */
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
   const [feedback, setFeedback] = useState([]);
   const [feedbackObjectToBeEdited, setFeedbackObjectToBeEdited] = useState({
     item: {},
@@ -31,16 +31,16 @@ export const FeedbackProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    fetchFeedback()
+    fetchFeedback();
   }, []);
 
   // Fetch feedback
   const fetchFeedback = async () => {
-    const response = await fetch(`http://localhost:5000/feedback`) // ?_sort=id&_order=desc
-    const data = await response.json()
-    setFeedback(data)
-    setIsLoading(false)
-  }
+    const response = await fetch(`http://localhost:5000/feedback`); // ?_sort=id&_order=desc
+    const data = await response.json();
+    setFeedback(data);
+    setIsLoading(false);
+  };
 
   // Delete feedback
   const deleteFeedback = (id) => {
