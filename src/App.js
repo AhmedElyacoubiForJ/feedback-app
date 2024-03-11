@@ -9,6 +9,8 @@ import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./components/pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
 
+/* we want to make the app state globaly, Context API & useState comming soon */
+
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
 
