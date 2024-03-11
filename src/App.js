@@ -8,7 +8,6 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./components/pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
-import Post from "./components/Post";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -42,22 +41,9 @@ function App() {
                 />
               </>
             }
-          ></Route>
+          />
           <Route path="/about" element={<AboutPage />} />
-          {/*  <Route path="/post/:id/:name" element={<Post />} /> */}
-          {/* to test rediret */}
-          <Route path="/post" element={<Post />} />
         </Routes>
-        {/*   
-        <Card>
-          <NavLink to="/" activeClassName="active">
-            Home
-          </NavLink>
-          <NavLink to="/about" activeClassName="active">
-            About
-          </NavLink>
-        </Card> */}
-
         <AboutIconLink />
       </div>
     </Router>

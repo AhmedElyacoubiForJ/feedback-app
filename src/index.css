@@ -227,10 +227,4 @@ input:focus {
   .input-group input {
     width: 80%;
   }
-
-  /* NavLink 
-  .active {
-    background: black;
-    color: red;
-  } */
 }
