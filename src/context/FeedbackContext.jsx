@@ -23,6 +23,7 @@ export const FeedbackProvider = ({ children }) => {
     },
   ]); */
 
+  const [isLoading, setIsLoading] = useState(true)
   const [feedback, setFeedback] = useState([]);
   const [feedbackObjectToBeEdited, setFeedbackObjectToBeEdited] = useState({
     item: {},
@@ -38,6 +39,7 @@ export const FeedbackProvider = ({ children }) => {
     const response = await fetch(`http://localhost:5000/feedback`) // ?_sort=id&_order=desc
     const data = await response.json()
     setFeedback(data)
+    setIsLoading(false)
   }
 
   // Delete feedback
@@ -75,6 +77,7 @@ export const FeedbackProvider = ({ children }) => {
       value={{
         feedback,
         feedbackObjectToBeEdited,
+        isLoading,
         deleteFeedback,
         addFeedback,
         editFeedback,
