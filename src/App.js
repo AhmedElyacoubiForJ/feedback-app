@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import Header from "./components/Header";
 import FeedbackList from "./components/FeedbackList";
@@ -48,9 +44,11 @@ function App() {
             }
           ></Route>
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/post/:id/:name" element={<Post />} />
+          {/*  <Route path="/post/:id/:name" element={<Post />} /> */}
+          {/* to test rediret */}
+          <Route path="/post" element={<Post />} />
         </Routes>
-      {/*   
+        {/*   
         <Card>
           <NavLink to="/" activeClassName="active">
             Home
