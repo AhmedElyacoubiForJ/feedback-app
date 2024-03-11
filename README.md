@@ -77,3 +77,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `npm run build`
 ### `serve -s build`
 ### TODO is to deploy on https://app.netlify.com/login for static test
+
+### `npm i json-server`
+### `npm run server`
+
+### https://www.npmjs.com/package/json-server
