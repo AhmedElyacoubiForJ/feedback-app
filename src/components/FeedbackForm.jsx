@@ -14,16 +14,17 @@ function FeedbackForm() {
 
   // exact what we want to use from context
   // Fetch handler with the useContext Hook
-  const { addFeedback, feedbackObjectToBeEdited } = useContext(FeedbackContext);
+  const { addFeedback, feedbackObjectToBeEdited, updateFeedback } =
+    useContext(FeedbackContext);
 
   // Side Effect with useEffect
   useEffect(() => {
-    if(feedbackObjectToBeEdited.edit === true) {
-      setBtnDisabled(false)
-      setText(feedbackObjectToBeEdited.item.text)
-      setRating(feedbackObjectToBeEdited.item.rating)
+    if (feedbackObjectToBeEdited.edit === true) {
+      setBtnDisabled(false);
+      setText(feedbackObjectToBeEdited.item.text);
+      setRating(feedbackObjectToBeEdited.item.rating);
     }
-  },[feedbackObjectToBeEdited])
+  }, [feedbackObjectToBeEdited]);
 
   const handleTextChange = (e) => {
     // validation
@@ -48,7 +49,12 @@ function FeedbackForm() {
         text: text,
         rating: rating,
       };
-      addFeedback(newFeedback);
+
+      if (feedbackObjectToBeEdited.edit === true) {
+        updateFeedback(feedbackObjectToBeEdited.item.id, newFeedback);
+      } else {
+        addFeedback(newFeedback);
+      }
 
       // clear the form
       setText("");
