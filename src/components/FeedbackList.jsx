@@ -44,7 +44,10 @@ function FeedbackList({ handleDelete }) {
   // );
 }
 
-/* don't needed any more 
+/* the component
+  don't have the property feedback no more, so the check is superfluous.
+  But I'll leave it here as an example.
+  
   FeedbackList.propTypes = {
   feedback: PropTypes.arrayOf(
     PropTypes.shape({
