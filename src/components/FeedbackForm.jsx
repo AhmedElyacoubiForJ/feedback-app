@@ -16,6 +16,7 @@ function FeedbackForm() {
   // Fetch handler with the useContext Hook
   const { addFeedback, feedbackObjectToBeEdited } = useContext(FeedbackContext);
 
+  // Side Effect with useEffect
   useEffect(() => {
     if(feedbackObjectToBeEdited.edit === true) {
       setBtnDisabled(false)

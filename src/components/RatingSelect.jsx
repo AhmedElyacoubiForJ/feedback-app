@@ -6,6 +6,7 @@ function RatingSelect({ select }) {
   const [selected, setSelected] = useState(10);
 
   const { feedbackObjectToBeEdited } = useContext(FeedbackContext);
+  // Side Effect with useEffect
   useEffect(() => {
     setSelected(feedbackObjectToBeEdited.item.rating)
   }, [feedbackObjectToBeEdited])
