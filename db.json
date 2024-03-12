@@ -14,16 +14,6 @@
       "id": "3",
       "rating": 8,
       "text": "This is feedback item 3 coming from the backend"
-    },
-    {
-      "id": "f60f",
-      "text": "This is a feedback is going to be added on json server",
-      "rating": 4
-    },
-    {
-      "id": "d219",
-      "text": "This also a new feedback that will be added to json server",
-      "rating": 2
     }
   ]
 }
